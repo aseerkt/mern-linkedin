@@ -1,4 +1,30 @@
 .input {
-  display: flex;
-  flex-direction: column;
+  &__control {
+    margin-bottom: 1rem;
+  }
+  &__label {
+    display: block;
+    font-size: 0.9rem;
+    // line-height: inherit;
+    margin-bottom: 0;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    height: 32px;
+    font-family: inherit;
+    &:focus {
+      border-width: 2px;
+    }
+  }
+  &__helperText {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  &__errorText {
+    color: #d11124;
+  }
 }
