@@ -21,6 +21,7 @@
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.6.0",
     "reflect-metadata": "^0.1.13",
+    "ts-node": "^9.1.1",
     "type-graphql": "^1.1.1",
     "typeorm": "^0.2.32",
     "typescript": "^4.2.4"
@@ -33,6 +34,7 @@
     "start": "node dist/server.js",
     "server": "nodemon --ignore client/ dist/server.js ",
     "watch": "npx tsc -w",
-    "dev": "concurrently \"yarn watch\" \"yarn server\" -n tsc,server"
+    "dev": "concurrently \"yarn watch\" \"yarn server\" -n tsc,server",
+    "typeorm": "ts-node ./node_modules/typeorm/cli.js"
   }
 }

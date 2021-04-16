@@ -2,13 +2,13 @@ const PROD = process.env.NODE_ENV === 'production';
 
 module.exports = {
   type: 'postgres',
-  url: 'postgresql://postgres:postgres@localhost/linkedin',
+  url: process.env.DATABASE_URL,
   synchronize: false,
   logging: !PROD,
-  entities: ['dist/entities/**.*.js'],
-  migrations: ['dist/migrations/**.*.js'],
+  entities: ['dist/entities/**/*.js'],
+  migrations: ['dist/migrations/**/*.js'],
   cli: {
-    entitiesDir: ['dist/entities/**.*.js'],
-    migrationsDir: ['dist/migrations/**.*.js'],
+    entitiesDir: ['src/entities'],
+    migrationsDir: ['src/migrations'],
   },
 };
