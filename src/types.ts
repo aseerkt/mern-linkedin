@@ -1,4 +1,4 @@
 export interface FieldError {
-  param: string;
+  path: string;
   msg: string;
 }
