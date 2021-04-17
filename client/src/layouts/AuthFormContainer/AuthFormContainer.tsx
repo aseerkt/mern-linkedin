@@ -1,4 +1,4 @@
-import Logo from '../components/Logo';
+import Logo from '../../components/Logo/Logo';
 import './AuthFormContainer.scss';
 
 interface AuthFormContainerProps {
@@ -10,10 +10,10 @@ const AuthFormContainer: React.FC<AuthFormContainerProps> = ({
   children,
 }) => {
   return (
-    <div className='auth-form'>
+    <div className='auth-form-container'>
       <Logo />
-      <h1 className='auth-form__subtitle'>{subTitle}</h1>
-      <section className='auth-form__body'>{children}</section>
+      <h1 className='auth-form-container__subtitle'>{subTitle}</h1>
+      <section className='auth-form-container__body'>{children}</section>
     </div>
   );
 };

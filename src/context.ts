@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
+import { createUserLoader } from './dataloaders/userLoader';
 
-export interface Context {
+export interface MyContext {
   req: Request;
   res: Response & { locals: { userId: string } };
+  userLoader: ReturnType<typeof createUserLoader>;
 }

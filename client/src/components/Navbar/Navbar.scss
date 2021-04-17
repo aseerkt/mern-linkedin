@@ -1,0 +1,111 @@
+$tab-width: 5.5rem;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: #fff;
+  border-bottom: 1px solid lightgray;
+  line-height: normal;
+
+  &__section {
+    height: 100%;
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 2.5rem;
+    color: #2977c9;
+  }
+
+  &__search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-left: 0.6rem;
+    &_Icon {
+      font-size: 0.8rem;
+      position: absolute;
+      top: 50%;
+      left: 0.5rem;
+      transform: translateY(-50%);
+      color: rgba(0, 0, 0, 1);
+    }
+    &_Input {
+      background-color: rgba(0, 0, 0, 0.05);
+      border: 0;
+      padding: 0.7rem;
+      padding-left: 2rem;
+      border-radius: 4px;
+      &:focus {
+        padding-left: 3rem;
+        width: 100%;
+      }
+    }
+  }
+  &__right {
+    height: 100%;
+  }
+
+  &__nav {
+    height: 100%;
+    vertical-align: middle;
+    ul {
+      height: 100%;
+      display: flex;
+      list-style-type: none;
+      li a {
+        position: relative;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.9rem;
+        width: $tab-width;
+        opacity: 0.7;
+        padding: 0.3rem 0;
+        i {
+          font-size: 1.4rem;
+        }
+        small {
+          display: flex;
+          align-items: flex-start;
+          margin-top: 0.2rem;
+          i {
+            margin-left: 0.2rem;
+            margin-top: -0.3rem;
+          }
+        }
+        &:hover {
+          opacity: 1;
+        }
+        &.current-page {
+          opacity: 1;
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: $tab-width;
+            background-color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  &__avatar {
+    height: 1.4rem;
+    width: 1.4rem;
+    border-radius: 50%;
+  }
+}

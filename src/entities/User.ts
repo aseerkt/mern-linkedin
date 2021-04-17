@@ -42,6 +42,10 @@ export class User extends BaseICU {
   @Column({ default: '' })
   avatar: string;
 
+  @Field()
+  @Column({ default: '' })
+  headline: string;
+
   // Methods
   @BeforeInsert()
   async hashPassword() {

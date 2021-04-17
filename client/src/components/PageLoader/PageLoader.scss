@@ -1,0 +1,44 @@
+.pageLoader {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+  width: 100vw;
+  background-color: #f3f2ef;
+  overflow: hidden;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .loader-bar {
+    margin-top: 1rem;
+    height: 3px;
+    width: 100%;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1);
+    position: relative;
+    .loader {
+      height: 100%;
+      width: 20px;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.2);
+      animation: left-and-right infinite 1s;
+      position: absolute;
+    }
+  }
+}
+
+@keyframes left-and-right {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  100% {
+    right: 0;
+  }
+}

@@ -16,15 +16,27 @@
     border: 1px solid rgba(0, 0, 0, 0.6);
     border-radius: 4px;
     height: 32px;
+    line-height: 1;
+    font-size: 1rem;
     font-family: inherit;
     &:focus {
       border-width: 2px;
     }
+    &--error {
+      border-color: #d11124;
+      border-width: 2px;
+    }
   }
   &__helperText {
+    display: block;
     color: rgba(0, 0, 0, 0.5);
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
   }
   &__errorText {
+    display: block;
+    font-size: 0.9rem;
     color: #d11124;
+    margin-top: 0.3rem;
   }
 }
